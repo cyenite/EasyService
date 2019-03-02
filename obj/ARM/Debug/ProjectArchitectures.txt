@@ -1,0 +1,1 @@
+C:\Users\Techmaster\Desktop\UWP Samples\Windows-universal-samples-master\Samples\ContactPanel\cs\ContactPanel.csproj;arm

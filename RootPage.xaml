@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="SDKTemplate.RootPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SDKTemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <Grid>
+            <RelativePanel>
+                <Hub Header="ACTIVITY" Margin="194,10,444,502" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <HubSection Header="NERBY PROFESSIONS" IsHeaderInteractive="True" RelativePanel.AlignLeftWithPanel="True">
+                        <DataTemplate>
+                            <Grid/>
+                        </DataTemplate>
+                    </HubSection>
+                    <HubSection Header="Apply As a Professional" FontWeight="Bold" Foreground="Red">
+                        <DataTemplate>
+                            <Grid/>
+                        </DataTemplate>
+                    </HubSection>
+                </Hub>
+                <RadioButton Content="Profession" HorizontalAlignment="Left" Margin="836,37,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <RadioButton Content="Customer" RelativePanel.RightOf="logout" HorizontalAlignment="Left" Margin="1000,37,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <Button Name="logout" Content="Log Out" Foreground="AliceBlue" Background="Red" HorizontalAlignment="Left" RelativePanel.AlignRightWithPanel="True" Margin="1186,32,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            </RelativePanel>
+            <SplitView>
+                <ListBox>
+                    <ListBoxItem>
+                      <DataTemplate>
+                          <StackPanel>
+                              <Button Name="signup" HorizontalAlignment="Left" Margin="10,28,0,0" Content="Sign Up" Foreground="Green" VerticalAlignment="Top"  Width="109" Click="Signup_OnClick"/>
+                              <Button Name="login" HorizontalAlignment="Left" Margin="10,88,0,0" Content="Log In" Foreground="Blue" VerticalAlignment="Top"  Width="121" Click="Login_OnClick"/>
+                              <Button Name="view"  HorizontalAlignment="Left" Margin="10,151,0,0"  Content="View Professionals" VerticalAlignment="Top" Width="98"/>
+                              <Button Name="Apply" HorizontalAlignment="Left" Margin="10,216,0,0"  Content="Apply"  VerticalAlignment="Top" RenderTransformOrigin="-0.224,0.489" Width="104" Click="Apply_OnClick"/>
+                              <Button Name="settings" HorizontalAlignment="Left" Margin="10,271,0,0"  Content="Settings " VerticalAlignment="Top" Click="Settings_OnClick"/>
+                              <Button Name="About" HorizontalAlignment="Left" Margin="10,325,0,0" Content="About" VerticalAlignment="Top"  Click="About_OnClick"/>
+                          </StackPanel>
+
+                </DataTemplate>
+                    </ListBoxItem>
+                </ListBox>
+            
+            </SplitView>
+
+        </Grid>
+        <Frame Name="MyFrame"></Frame>
+
+    </StackPanel>
+
+</Page>
